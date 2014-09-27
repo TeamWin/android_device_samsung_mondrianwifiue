@@ -14,7 +14,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 # Flags
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE -DNO_SECURE_DISCARD
+COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE 
 
 # Architecture
 TARGET_CPU_VARIANT := krait
@@ -47,6 +47,8 @@ TARGET_PREBUILT_KERNEL := device/samsung/mondrianwifiue/kernAl
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
+
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 # TWRP specific build flags
 DEVICE_RESOLUTION := 1600x2560
